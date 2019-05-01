@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">DC_Driver_App</string>
+    <string name="motor1_label">Motor 1</string>
+    <string name="motor2_label">Motor 2</string>
+    <string name="stepper_label">Stepper motor</string>
+    <string name="servo1_label">Servo 1</string>
+    <string name="servo2_label">Servo 2</string>
+    <string name="direction_label">Direction</string>
+    <string name="velocity_label">Velocity</string>
+    <string name="position_label">Position</string>
+    <string name="left_label">L</string>
+    <string name="right_label">R</string>
+    <string name="back_btn_label">Back to menu</string>
+    <string name="dc_motor_activity_btn_label">Go to DC motor panel</string>
+    <string name="servo_activity_btn_label">Go to servo panel</string>
+    <string name="stepper_activity_btn_label">Go to stepper motor panel</string>
+
 </resources>
