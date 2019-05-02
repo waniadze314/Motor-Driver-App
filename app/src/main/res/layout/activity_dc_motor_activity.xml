@@ -18,17 +18,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="16dp"
-        android:enabled="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:enabled="false" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -46,7 +35,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:text="@string/left_label"
-        app:layout_constraintEnd_toStartOf="@+id/switch1"
+        app:layout_constraintEnd_toStartOf="@+id/dc1_direction"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
@@ -56,7 +45,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="@string/right_label"
-        app:layout_constraintStart_toEndOf="@+id/switch1"
+        app:layout_constraintStart_toEndOf="@+id/dc1_direction"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
@@ -72,7 +61,7 @@
     <SeekBar
         android:id="@+id/dc1_velocity"
         android:layout_width="150dp"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,11 +90,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <Switch
-        android:id="@+id/switch3"
+        android:id="@+id/dc2_direction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="16dp"
+        android:enabled="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -116,7 +106,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="@string/right_label"
-        app:layout_constraintStart_toEndOf="@+id/switch3"
+        app:layout_constraintStart_toEndOf="@+id/dc2_direction"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <TextView
@@ -126,29 +116,30 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:text="@string/left_label"
-        app:layout_constraintEnd_toStartOf="@+id/switch3"
+        app:layout_constraintEnd_toStartOf="@+id/dc2_direction"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="40dp"
         android:text="@string/velocity_label"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
-        tools:layout_editor_absoluteX="271dp" />
+        app:layout_constraintStart_toStartOf="@+id/dc_2_velocity"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <SeekBar
         android:id="@+id/dc_2_velocity"
         android:layout_width="150dp"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <Button
-        android:id="@+id/back_btn"
+        android:id="@+id/dc_menu_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -159,27 +150,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/servo_panel_btn"
+    <Switch
+        android:id="@+id/dc1_direction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/servo_activity_btn_label"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/back_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <Button
-        android:id="@+id/stepper_panel_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/stepper_activity_btn_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/servo_panel_btn" />
 </android.support.constraint.ConstraintLayout>

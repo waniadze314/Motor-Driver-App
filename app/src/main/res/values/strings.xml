@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">DC_Driver_App</string>
+    <string name="welcome_1">Welcome to Universal DC Driver Aplication 1.0</string>
+    <string name="chose_option">Chose motor You want to control</string>
+    <string name="app_name">DC Driver App</string>
     <string name="motor1_label">Motor 1</string>
     <string name="motor2_label">Motor 2</string>
     <string name="stepper_label">Stepper motor</string>
@@ -11,8 +13,17 @@
     <string name="left_label">L</string>
     <string name="right_label">R</string>
     <string name="back_btn_label">Back to menu</string>
-    <string name="dc_motor_activity_btn_label">Go to DC motor panel</string>
-    <string name="servo_activity_btn_label">Go to servo panel</string>
-    <string name="stepper_activity_btn_label">Go to stepper motor panel</string>
+    <string name="dc_motor_activity_btn_label">DC motor panel</string>
+    <string name="servo_activity_btn_label">servo panel</string>
+    <string name="stepper_activity_btn_label">stepper motor panel</string>
+    <string name="mobile_platform_activity_btn_label">mobile platform panel</string>
+    <string name="zero_angle_label">0</string>
+    <string name="full_angle_label">180</string>
+    <string name="left_move_label">Move left</string>
+    <string name="right_move_label">Move right</string>
+    <string name="step_hint">Steps</string>
+    <string name="bt_switch">On/Off</string>
+    <string name="connect_btn_label">Connect to driver</string>
+    <string name="driver_name">HC-06</string>
 
 </resources>
