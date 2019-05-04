@@ -67,33 +67,15 @@ public class dc_motor_activity extends AppCompatActivity {
             }
         });
 
-        dc1Direction.setOnClickListener(new View.OnClickListener() {
+        dc1Velocity.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
-            public void onClick(View v) {
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if(dc1Direction.isChecked()){
                     dc1ActiveCommand = 1;
                 }
                 else{
                     dc1ActiveCommand = -1;
                 }
-            }
-        });
-
-        dc2Direction.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(dc2Direction.isChecked()){
-                    dc2ActiveCommand = 1;
-                }
-                else{
-                    dc2ActiveCommand = -1;
-                }
-            }
-        });
-
-        dc1Velocity.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 int tmp1 = dc1Velocity.getProgress();
                 int val1 = 50 + tmp1*dc1ActiveCommand;
                 String commandA = "MA" + String.valueOf(val1) + "\n";
@@ -114,6 +96,12 @@ public class dc_motor_activity extends AppCompatActivity {
         dc2Velocity.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if(dc2Direction.isChecked()){
+                    dc2ActiveCommand = 1;
+                }
+                else{
+                    dc2ActiveCommand = -1;
+                }
                 int tmp2 = dc2Velocity.getProgress();
                 int val2 = 50 + tmp2*dc2ActiveCommand;
                 String commandB = "MB" + String.valueOf(val2) + "\n";
