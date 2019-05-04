@@ -6,4 +6,82 @@
     android:layout_height="match_parent"
     tools:context=".mobile_platform_activity">
 
+    <ImageView
+        android:id="@+id/forward_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/forward_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/forward_arrow_inactive" />
+
+    <ImageView
+        android:id="@+id/left_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="125dp"
+        android:contentDescription="@string/left_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/left_arrow_inactive" />
+
+    <ImageView
+        android:id="@+id/right_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/backward_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/right_arrow_inactive" />
+
+    <ImageView
+        android:id="@+id/backward_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/backward_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backward_arrow_inactive" />
+
+    <Button
+        android:id="@+id/platform_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/back_btn_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/start_stop_btn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/start_stop"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/backward_view"
+        app:layout_constraintEnd_toStartOf="@+id/right_view"
+        app:layout_constraintStart_toEndOf="@+id/left_view"
+        app:layout_constraintTop_toBottomOf="@+id/forward_view"
+        app:layout_constraintVertical_bias="0.45"
+        tools:src="@drawable/start" />
+
 </android.support.constraint.ConstraintLayout>
