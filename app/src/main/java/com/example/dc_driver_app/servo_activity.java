@@ -10,10 +10,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 public class servo_activity extends AppCompatActivity {
     Button servoBackBtn;
     SeekBar servoAPosition, servoBPosition;
+    TextView servoAPositionValue, servoBPositionValue;
     ServiceConnection btServiceConnection;
     protected bluetooth_service btService;
 
@@ -25,6 +27,10 @@ public class servo_activity extends AppCompatActivity {
         servoBackBtn = (Button)findViewById(R.id.dc_stepper_btn);
         servoAPosition = (SeekBar)findViewById(R.id.servo_A_position_bar);
         servoBPosition = (SeekBar)findViewById(R.id.servo_B_position_bar);
+        servoAPositionValue = (TextView)findViewById(R.id.servo_A_position_text);
+        servoBPositionValue = (TextView)findViewById(R.id.servo_B_position_text);
+        servoAPositionValue.setText("0");
+        servoBPositionValue.setText("0");
 
         btServiceConnection = new ServiceConnection() {
             @Override
@@ -54,6 +60,7 @@ public class servo_activity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 int tmp = servoAPosition.getProgress();
+                servoAPositionValue.setText(String.valueOf(tmp));
                 String commandSA = "SA" + String.valueOf(tmp) + "\n";
                 btService.sendCommandViaBluetooth(commandSA);
             }
@@ -73,6 +80,7 @@ public class servo_activity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 int tmp = servoBPosition.getProgress();
+                servoBPositionValue.setText(String.valueOf(tmp));
                 String commandSB = "SB" + String.valueOf(tmp) + "\n";
                 btService.sendCommandViaBluetooth(commandSB);
             }

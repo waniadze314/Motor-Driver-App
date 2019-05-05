@@ -18,9 +18,11 @@ public class dc_motor_activity extends AppCompatActivity {
     SeekBar dc1Velocity, dc2Velocity;
     int dc1ActiveCommand = 1;
     int dc2ActiveCommand = 1;
+
     ServiceConnection btServiceConnection;
     protected bluetooth_service btService;
-    private final String stop_command = "MA50\nMB50\n";
+    private final int offset = 100;
+    private final String stop_command = "MA0\nMB0\n";
 
 
     @Override
@@ -74,10 +76,10 @@ public class dc_motor_activity extends AppCompatActivity {
                     dc1ActiveCommand = 1;
                 }
                 else{
-                    dc1ActiveCommand = -1;
+                    dc1ActiveCommand = 0;
                 }
                 int tmp1 = dc1Velocity.getProgress();
-                int val1 = 50 + tmp1*dc1ActiveCommand;
+                int val1 = offset*dc1ActiveCommand + tmp1;
                 String commandA = "MA" + String.valueOf(val1) + "\n";
                 btService.sendCommandViaBluetooth(commandA);
             }
@@ -100,10 +102,10 @@ public class dc_motor_activity extends AppCompatActivity {
                     dc2ActiveCommand = 1;
                 }
                 else{
-                    dc2ActiveCommand = -1;
+                    dc2ActiveCommand = 0;
                 }
                 int tmp2 = dc2Velocity.getProgress();
-                int val2 = 50 + tmp2*dc2ActiveCommand;
+                int val2 = offset*dc2ActiveCommand + tmp2;
                 String commandB = "MB" + String.valueOf(val2) + "\n";
                 btService.sendCommandViaBluetooth(commandB);
 

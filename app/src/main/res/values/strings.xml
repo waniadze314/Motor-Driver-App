@@ -18,7 +18,7 @@
     <string name="stepper_activity_btn_label">stepper motor</string>
     <string name="mobile_platform_activity_btn_label">mobile platform</string>
     <string name="zero_angle_label">0</string>
-    <string name="full_angle_label">180</string>
+    <string name="full_angle_label">135</string>
     <string name="left_move_label">Move left</string>
     <string name="right_move_label">Move right</string>
     <string name="step_hint">Steps</string>
